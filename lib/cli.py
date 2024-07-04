@@ -25,3 +25,8 @@ number = input('Enter the phone number: ')
 phone_type = input('Enter the type of phone number: ')
 add_phone_to_person(person_id, number, phone_type)
 elif choice == '4':
+
+print('Exiting Phonebook CLI.')
+break
+else:
+print('Invalid choice. Please try again.')
