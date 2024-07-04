@@ -47,3 +47,27 @@ Base.metadata.create_all(engine)
 # Create a session to interact with the database
 Session = sessionmaker(bind=engine)
 session = Session()
+
+ef delete_person(session, person_id):
+    person = session.query(Person).filter_by(id=person_id).first()
+    if person:
+        session.delete(person)
+        session.commit()
+        return f'Person with id {person_id} deleted'
+    return f'Person with id {person_id} not found'
+
+def delete_phone(session, phone_id):
+    phone = session.query(Phone).filter_by(id=phone_id).first()
+    if phone:
+        session.delete(phone)
+        session.commit()
+        return f'Phone with id {phone_id} deleted'
+    return f'Phone with id {phone_id} not found'
+
+def delete_address(session, address_id):
+    address = session.query(Address).filter_by(id=address_id).first()
+    if address:
+        session.delete(address)
+        session.commit()
+        return f'Address with id {address_id} deleted'
+    return f'Address with id {address_id} not found'
