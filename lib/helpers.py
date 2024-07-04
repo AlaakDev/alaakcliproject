@@ -30,6 +30,17 @@ def add_phone_to_person(person_id, number, phone_type):
     else:
         print(f"Person with ID '{person_id}' not found.")
 
+def delete_person_by_id(person_id):
+    person = session.query(Person).filter_by(id=person_id).first()
+    if person:
+        session.delete(person)
+        session.commit()
+        print(f"Deleted person with ID '{person_id}' and all associated data.")
+    else:
+        print(f"Person with ID '{person_id}' not found.")
+
+
+
 
 
 

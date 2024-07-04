@@ -41,10 +41,10 @@ class Address(Base):
     def __repr__(self):
         return f'<Address(id={self.id}, street={self.street}, city={self.city}, state={self.state})>'
 
-# Create the tables in the database
+
 Base.metadata.create_all(engine)
 
-# Create a session to interact with the database
+
 Session = sessionmaker(bind=engine)
 session = Session()
 
