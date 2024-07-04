@@ -1,4 +1,4 @@
-from db.models import session, Person, Phone
+from db.models import session, Person, Phone, Address
 
 def search_person_by_name(name):
     persons = session.query(Person).filter(Person.name.ilike(f'%{name}%')).all()
@@ -38,6 +38,22 @@ def delete_person_by_id(person_id):
         print(f"Deleted person with ID '{person_id}' and all associated data.")
     else:
         print(f"Person with ID '{person_id}' not found.")
+
+def list_all_persons():
+    persons = session.query(Person).all()
+    if persons:
+        for person in persons:
+            print(f"ID: {person.id}, Name: {person.name}")
+            print("Phones:")
+            for phone in person.phones:
+                print(f" - {phone.number} ({phone.type})")
+            print("Addresses:")
+            for address in person.addresses:
+                print(f" - {address.street}, {address.city}, {address.state}")
+            print()
+    else:
+        print("No persons found in the phonebook.")
+
 
 
 
