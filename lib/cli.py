@@ -12,3 +12,16 @@ print('3. Add a phone number to an existing person')
 print('4. Exit\n')
 
 choice = input('Enter your choice: ')
+
+if choice == '1':
+name = input('Enter the name to search: ')
+search_person_by_name(name)
+elif choice == '2':
+name = input('Enter the name of the new person: ')
+add_new_person(name)
+elif choice == '3':
+person_id = input('Enter the ID of the person: ')
+number = input('Enter the phone number: ')
+phone_type = input('Enter the type of phone number: ')
+add_phone_to_person(person_id, number, phone_type)
+elif choice == '4':
