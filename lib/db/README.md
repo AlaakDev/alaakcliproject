@@ -39,26 +39,27 @@ Add a contact
 
 add <name> <phone_number>
 Example:
-add John Doe 123-456-7890
+add samuel 
 
 Search for a contact
 search <name>
 Example:
-search John Doe
+search samuel
 
 Update a contact
 update <name> <new_phone_number>
 Example:
-update John Doe 098-765-4321
+update samuel
 
 Delete a contact
 delete <name>
 example;
-delete John Doe
+delete samuel
+
 
 Contributions are welcome! Please create a pull request or open an issue to discuss any changes.
 
 Contact
-If you have any questions or suggestions, please feel free to reach out at alaakelijah@gmail.com
+If you have any questions or suggestions, feel free to reach out at alaakelijah@gmail.com
 
-Enjoy managing your contacts anytime anywhere with the Phonebook application
+Enjoy managing your contacts anytime anywhere with the Phonebook application.
